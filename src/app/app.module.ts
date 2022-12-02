@@ -20,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     EmployeModule,
-
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule
