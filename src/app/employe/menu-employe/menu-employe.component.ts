@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/components/services/auth.service';
 
 
 @Component({
@@ -8,12 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuEmployeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,
+    private authService:AuthService) { }
 
   ngOnInit(): void {
   }
   deconnect(){
-
+    this.authService.connected= false;
+    this.router.navigate(['/login']);
   }
 
 }
